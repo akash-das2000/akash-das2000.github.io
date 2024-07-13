@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "PhotoofAkashDas.jpg"
+  avatar           : "profile.png" #"PhotoofAkashDas.jpg"
   name             : "Akash Das"
   pronouns         : # example: "she/her"  
   bio              : "Research Professional providing data-driven intelligent solutions"
