@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Akash Das"
+title                    : "     Akash Das"
 title_separator          : "-"
 name                     : &name "Akash Das"
 description              : &description "Research Professional"
@@ -25,7 +25,7 @@ author:
   name             : "Akash Das"
   pronouns         : # example: "she/her"  
   bio              : "Research Professional providing data-driven intelligent solutions"
-  location         : "Earth"
+  location         : "Bangalore, India"
   employer         : "TCS Reserch"
   uri              : # URL
   email            : "akashdas1966@gmail.com" 
@@ -34,9 +34,9 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=wikJ0m8AAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : #"http://orcid.org/yourorcidurl"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
 
   # Repositories and software development
