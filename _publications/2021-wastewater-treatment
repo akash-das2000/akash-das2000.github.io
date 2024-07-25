@@ -5,7 +5,6 @@ permalink: /publication/wastewater-treatment
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2021-01-01
 venue: 'Computer Aided Chemical Engineering'
-<!-- slidesurl: 'http://academicpages.github.io/files/slides1.pdf'-->
 paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/B9780323885065502333'
 citation: 'Das, Akash, Piyush Kumar Kumawat, and Nitin Dutt Chaturvedi. "A study to target energy consumption in wastewater treatment plant using machine learning algorithms." Computer Aided Chemical Engineering. Vol. 50. Elsevier, 2021. 1511-1516.'
 ---
