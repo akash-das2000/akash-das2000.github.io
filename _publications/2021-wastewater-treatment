@@ -2,7 +2,7 @@
 title: "A study to target energy consumption in wastewater treatment plant using machine learning algorithms"
 collection: publications
 permalink: /publication/wastewater-treatment
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Wastewater treatment plants (WWTPs) are among the largest municipal electricity users worldwide, making accurate energy cost estimation crucial for substantial savings and effective planning. The challenge in predicting energy consumption lies in the complexity of the input parameters, which include various organic materials processed by WWTPs. This study addresses this challenge by utilizing advanced machine learning models trained on real-world data to forecast the energy consumption of WWTPs. By leveraging four different algorithms and evaluating their performance using mean absolute error (MAE) and root mean square error (RMSE), the research identifies the GRU (Gated Recurrent Unit) model as the best fit for future analysis and recommendations.'
 date: 2021-01-01
 venue: 'Computer Aided Chemical Engineering'
 paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/B9780323885065502333'
