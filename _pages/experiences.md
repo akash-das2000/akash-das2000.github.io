@@ -4,7 +4,7 @@ permalink: /experiences/
 layout: single
 ---
 
-# My Experiences
+<!-- # My Experiences-->
 
 ## Full-Time Experiences
 
@@ -22,7 +22,7 @@ layout: single
 
 ## Internship Experiences
 
-### Experience 2
+### Experience 1
 - **Role**: Machine Learning Intern
 - **Company**: TechConative
 - **Duration**: Jan 2024 - Mar 2024
@@ -32,7 +32,7 @@ layout: single
   - Contribution 2
   - Contribution 3
 
-### Experience 3
+### Experience 2
 - **Role**: Technology Intern
 - **Company**: Siemens India
 - **Duration**: Jan 2024 - May 2024
@@ -42,7 +42,7 @@ layout: single
   - Contribution 2
   - Contribution 3
 
-### Experience 4
+### Experience 3
 - **Role**: Data Science Intern
 - **Company**: Fidelity Investments
 - **Duration**: June 2023 - July 2023
@@ -52,7 +52,7 @@ layout: single
   - Contribution 2
   - Contribution 3
 
-### Experience 5
+### Experience 4
 - **Role**: Machine Learning Intern
 - **Company**: Siemens India
 - **Duration**: Dec 2022 - May 2023
