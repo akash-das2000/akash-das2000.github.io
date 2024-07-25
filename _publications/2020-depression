@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2020-depression
 excerpt: 'Preliminary detection of mild depression is crucial for effective treatment, yet societal stigmas and misconceptions make mental health status estimation challenging. Traditional deep learning methods often fail to generalize across diverse individual traits in real-world settings. This paper proposes a hybrid deep learning approach combining one-shot learning, classical supervised methods, and human-AI interactions to create an adaptive and efficient diagnostic workflow. Utilizing video, audio, and text modalities, the Hybrid Fusion model captures comprehensive information for accurate diagnosis. The model achieved a high accuracy of 96.3% and an AUC of 0.9682, demonstrating its robustness in real-world scenarios. Deployed in a cloud-based smartphone application, the system ensures user-specific adaptations and state-of-the-art methodologies, providing a reliable and user-friendly experience for depression diagnosis.'
 date: 2020-11-30
-venue: arXiv 
+venue: 'arXiv'
 paperurl: 'https://arxiv.org/pdf/2011.14966'
 citation: 'Shalu, Hrithwik, et al. "Depression status estimation by deep learning based hybrid multi-modal fusion model." arXiv preprint arXiv:2011.14966 (2020).'
 ---
