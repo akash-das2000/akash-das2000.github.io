@@ -2,7 +2,7 @@
 title: "A Data-Efficient Deep Learning Based Smartphone Application For Detection Of Pulmonary Diseases Using Chest X-rays"
 collection: publications
 permalink: /publication/2020-xray
-excerpt: 'Coming Soon'
+excerpt: 'The COVID-19 pandemic has underscored the critical need for rapid and accurate disease diagnostics, prompting the development of innovative healthcare solutions. This paper presents a groundbreaking diagnostic approach through a smartphone application, designed to revolutionize healthcare services by diagnosing various pulmonary diseases from Chest X-Ray images taken with a smartphone camera. These images are processed using an AI architecture hosted on a cloud platform, ensuring high accuracy in disease identification. To address the challenges of limited training data and class imbalance, a Data Augmentation Generative Adversarial Network (DAGAN) and a Convolutional Siamese Network with an attention mechanism were employed. The model demonstrated impressive accuracies of 99.30% in binary classification and 98.40% in multiclass scenarios on publicly available datasets. Furthermore, a semi-live training scenario was implemented to enhance the application's performance over time. This application not only facilitates easy access to reliable healthcare but also promotes effective research on rare diseases in data-constrained environments.'
 date: 2020-08-21
 venue: 'arXiv'
 paperurl: 'https://arxiv.org/pdf/2008.08912'
