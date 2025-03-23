@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Home
+layout: landing
+title: Welcome to My Research Site
+subtitle: "Exploring the Intersection of Academia and Industry"
 ---
 
-# Welcome to My Site
-
-This is the homepage of my research website.
+<!-- You can add more content here if desired -->
