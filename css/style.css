@@ -1,4 +1,4 @@
-/* General Resets and Body Styling */
+/* 1. GLOBAL RESETS & BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -7,71 +7,53 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* optional smooth scrolling */
+  color: #333;
 }
 
-/* Sticky Header with Deep Blue Background */
+/* 2. TRANSPARENT NAVBAR */
 header {
-  position: fixed;
+  position: absolute;  /* sits on top of the hero image */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #001f3f;  /* Deep blue color */
-  color: #fff;
   z-index: 999;
-  padding: 1rem 0;
 }
-
-/* Navbar Container: name on left, links on right */
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Name on left, links on right */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
-
-/* Logo/Name Styling */
-.nav-logo {
+.site-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: #fff; /* White text to stand out on hero image */
 }
-
-/* Navigation Menu Styling */
-.nav-menu ul {
-  display: flex;
+.nav-links {
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
 }
-.nav-menu li {
-  margin-left: 20px;
+.nav-links li {
+  margin-left: 1.5rem;
 }
-.nav-menu a {
-  text-decoration: none;
+.nav-links a {
   color: #fff;
+  text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s;
 }
-.nav-menu a:hover {
-  color: #ccc;
+.nav-links a:hover {
+  color: #ddd;
 }
 
-/* Content Wrapper to Avoid Overlap with Fixed Header */
-.content-wrapper {
-  margin-top: 80px; /* Adjust this value if your header height changes */
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-}
-
-/* Optional: Additional Styling for Landing Page Sections */
-
-/* Full-Screen Hero Section */
+/* 3. FULL-SCREEN HERO SECTION */
 .hero {
-  height: 100vh;
+  height: 100vh; /* fill the viewport height */
   width: 100%;
   background: url("/assets/images/hero.jpg") no-repeat center center/cover;
   position: relative;
@@ -82,15 +64,17 @@ header {
   color: #fff;
 }
 .hero::after {
+  /* dark overlay for better text contrast */
   content: "";
   position: absolute;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 .hero-content {
-  position: relative;
+  position: relative; /* ensures content sits above overlay */
   z-index: 1;
   max-width: 800px;
   padding: 0 1rem;
@@ -103,40 +87,10 @@ header {
   font-size: 1.3rem;
 }
 
-/* About Section for Headshot and Brief Details */
-.about-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-  margin-top: -80px; /* Adjust to create a seamless transition */
-}
-.about-section img {
-  max-width: 300px;
-  border-radius: 8px;
-  margin: 1rem;
-}
-.about-text {
-  max-width: 600px;
-  margin: 1rem;
-}
-.about-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.about-text p {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-/* Footer Styling */
+/* 4. FOOTER (OPTIONAL) */
 footer {
-  background: #001f3f;
+  background: #000;
   color: #fff;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
 }
