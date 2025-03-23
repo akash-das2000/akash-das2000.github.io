@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,32 +9,41 @@
   <link rel="stylesheet" href="/css/style.css" />
   <style>
     /* Basic resets */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.5; scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-    /* Shared Navbar styling */
+    /* Shared Navbar styling using a deep blue background */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #000;
+      background-color: #001f3f; /* Deep blue */
       color: #fff;
       z-index: 999;
       padding: 1rem 0;
     }
-    
-    /* Content wrapper so content isn’t hidden behind the fixed header */
+
+    /* Content wrapper to avoid overlap with the fixed header */
     .content-wrapper {
-      margin-top: 80px; /* Adjust based on header height */
+      margin-top: 80px; /* Adjust this value based on header height */
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
       padding: 1rem;
     }
-    
+
+    /* Footer styling with deep blue background */
     footer {
-      background: #000;
+      background: #001f3f;
       color: #fff;
       text-align: center;
       padding: 1rem;
@@ -46,10 +57,12 @@
     {% include nav.html %}
   </header>
 
+  <!-- Main Content -->
   <div class="content-wrapper">
     {{ content }}
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
