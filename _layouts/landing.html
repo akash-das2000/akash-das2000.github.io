@@ -4,24 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{{ page.title }} | {{ site.title }}</title>
-
-  <!-- Link to your external stylesheet if desired -->
   <link rel="stylesheet" href="/css/style.css" />
-
   <style>
     /* Basic resets */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-      scroll-behavior: smooth; /* optional smooth scrolling */
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.5; scroll-behavior: smooth; }
 
-    /* Header (sticky navbar) */
+    /* Header styling for the shared navbar */
     header {
       position: fixed;
       top: 0;
@@ -30,36 +19,15 @@
       background-color: #000;
       color: #fff;
       z-index: 999;
+      padding: 1rem 0;
     }
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-    .nav-logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 2rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ccc;
-    }
+    /* (Optionally add extra CSS here if needed) */
 
     /* Hero Section */
     .hero {
-      /* Ensure the hero fills the screen */
       height: 100vh;
       width: 100%;
       background: url("/assets/images/hero.jpg") no-repeat center center/cover;
-      /* Adjust the path /assets/images/hero.jpg to your actual hero image */
       position: relative;
       display: flex;
       align-items: center;
@@ -67,7 +35,6 @@
       text-align: center;
       color: #fff;
     }
-    /* Dark overlay for better text contrast (optional) */
     .hero::after {
       content: "";
       position: absolute;
@@ -75,20 +42,10 @@
       width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.4);
     }
-    .hero-content {
-      position: relative; /* sit above the overlay */
-      z-index: 1;
-      max-width: 800px;
-      padding: 0 1rem;
-    }
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero-content p {
-      font-size: 1.3rem;
-    }
-
+    .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 1rem; }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.3rem; }
+    
     /* About Section */
     .about-section {
       display: flex;
@@ -98,59 +55,30 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 4rem 1rem;
-      /* Add top margin to avoid overlapping the sticky header */
-      margin-top: -80px; /* -80px because hero is full screen; tweak as needed */
+      margin-top: -80px; /* Adjust as needed */
     }
-    .about-section img {
-      max-width: 300px;
-      border-radius: 8px;
-      margin: 1rem;
-    }
-    .about-text {
-      max-width: 600px;
-      margin: 1rem;
-    }
-    .about-text h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .about-text p {
-      margin-bottom: 1rem;
-      color: #333;
-    }
+    .about-section img { max-width: 300px; border-radius: 8px; margin: 1rem; }
+    .about-text { max-width: 600px; margin: 1rem; }
+    .about-text h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .about-text p { margin-bottom: 1rem; color: #333; }
 
-    /* Footer (optional) */
+    /* Footer */
     footer {
       background: #000;
       color: #fff;
       text-align: center;
       padding: 1rem;
-    }
-
-    /* Ensure hero isn't covered by the sticky header */
-    .spacer {
-      margin-top: 70px; /* or whatever your header height is */
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <!-- Sticky Header -->
+  <!-- Use the shared navbar -->
   <header>
-    <div class="nav-container">
-      <div class="nav-logo">Akash Das</div>
-      <nav>
-        <!-- These links point to your existing pages -->
-        <a href="/bio.html">Bio</a>
-        <a href="/academics.html">Academics</a>
-        <a href="/work_exp.html">Work Exp</a>
-        <a href="/personal_projects.html">Personal Projects</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
+    {% include nav.html %}
   </header>
 
-  <!-- Full-Screen Hero Image -->
+  <!-- Full-Screen Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>{{ page.title }}</h1>
@@ -158,23 +86,20 @@
     </div>
   </section>
 
-  <!-- Scroll-Down Section: Headshot & Brief Details -->
+  <!-- About Section (Headshot & Brief Details) -->
   <section class="about-section">
     <img src="/assets/images/headshot.jpg" alt="Your Headshot" />
     <div class="about-text">
       <h2>About Me</h2>
       <p>
-        Introduce yourself: your background, research interests, 
-        current role, or any personal highlights you want to share.
+        Introduce yourself here—share your background, research interests, and personal highlights.
       </p>
       <p>
-        This can be a brief summary of your career, passions, and goals. 
-        You can expand or add more sections below as you like.
+        This section gives visitors a snapshot of who you are.
       </p>
     </div>
   </section>
 
-  <!-- Footer (optional) -->
   <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
