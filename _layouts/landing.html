@@ -6,14 +6,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{{ page.title }} | {{ site.title }}</title>
-  <!-- Link to your main stylesheet -->
-  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Inline CSS for a complete one-file solution -->
+  <style>
+    /* 1. GLOBAL RESETS & BASE STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      scroll-behavior: smooth; /* optional smooth scrolling */
+      color: #333;
+    }
+
+    /* 2. TRANSPARENT NAVBAR */
+    header {
+      position: absolute;  /* sits on top of the hero image */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Name on left, links on right */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff; /* White text to stand out on hero image */
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin-left: 1.5rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ddd;
+    }
+
+    /* 3. FULL-SCREEN HERO SECTION */
+    .hero {
+      height: 100vh; /* fill the viewport height */
+      width: 100%;
+      background: url("/assets/images/hero.jpg") no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero::after {
+      /* dark overlay for better text contrast */
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      position: relative; /* ensures content sits above overlay */
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+    }
+
+    /* 4. FOOTER (OPTIONAL) */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Shared Navbar Include -->
-  {% include nav.html %}
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <!-- Left: Your Name -->
+      <div class="site-title">Akash Das</div>
 
-  <!-- Full-Screen Hero Section -->
+      <!-- Right: Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/bio.html">Bio</a></li>
+          <li><a href="/academics.html">Academics</a></li>
+          <li><a href="/work_exp.html">Work Exp</a></li>
+          <li><a href="/personal_projects.html">Personal Projects</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FULL-SCREEN HERO SECTION -->
   <section class="hero">
     <div class="hero-content">
       <h1>{{ page.title }}</h1>
@@ -21,15 +136,7 @@
     </div>
   </section>
 
-  <!-- Additional Sections (optional) -->
-  <!-- If you want to add more content below the hero, you can place {{ content }} here, 
-       or define more sections. For example: 
-       <section class="about">
-         {{ content }}
-       </section>
-  -->
-
-  <!-- Footer (optional) -->
+  <!-- FOOTER (OPTIONAL) -->
   <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
