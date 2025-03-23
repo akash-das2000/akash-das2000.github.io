@@ -1,64 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- Link to your main stylesheet if you prefer -->
+  <link rel="stylesheet" href="/css/style.css" />
   <style>
-    /* Landing Page Specific Styles */
-    html, body {
+    /* Basic resets */
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
+      box-sizing: border-box;
     }
-    .hero {
-      background: url('/assets/images/landing-background.jpg') no-repeat center center/cover;
-      height: 100%;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Sticky navigation */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #0b0b0b;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+    nav {
       display: flex;
-      align-items: center;
       justify-content: center;
-      position: relative;
+      gap: 1rem;
+    }
+    nav a {
       color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ddd;
+    }
+
+    /* Hero or intro section */
+    .hero {
+      margin-top: 70px; /* Space for the sticky header */
+      background: #f4f4f4;
+      padding: 4rem 1rem;
       text-align: center;
     }
-    /* Overlay for better contrast */
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      padding: 0 20px;
-    }
-    .hero-content h1 {
-      font-size: 3rem;
+    .hero h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    .hero-content p {
+    .hero p {
       font-size: 1.2rem;
-      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
     }
-    /* Optional: Hide default header/nav if not needed on landing */
-    header, footer {
-      display: none;
+
+    /* About/Brief intro section */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1rem;
+      background: #fff;
+    }
+    .about-section img {
+      max-width: 300px;
+      border-radius: 8px;
+      margin: 1rem;
+    }
+    .about-text {
+      max-width: 600px;
+      margin: 1rem;
+      color: #333;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: #0b0b0b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+  <!-- Sticky Navbar -->
+  <header>
+    <nav>
+      <!-- Link these to separate pages in your repo (e.g., bio.md, projects.md) -->
+      <a href="/bio.html">Bio</a>
+      <a href="/policy.html">Policy & Advocacy</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/speaking.html">Speaking</a>
+      <a href="/multimedia.html">Multimedia</a>
+      <a href="/resume.html">Resume</a>
+      <!-- Adjust or remove as needed -->
+    </nav>
+  </header>
+
+  <!-- Hero / Intro Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>{{ page.title }}</h1>
-      <p>{{ page.subtitle }}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </section>
+
+  <!-- Brief About / Profile Section -->
+  <section class="about-section">
+    <!-- Example headshot or image -->
+    <img src="/assets/images/profile.jpg" alt="Profile Headshot" />
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        This is where you can provide a concise summary—your research focus,
+        current role, or any personal highlights you want to share.
+      </p>
+      <p>
+        You can also include a short description of your background,
+        professional interests, and goals to give visitors a snapshot of who you are.
+      </p>
+      <!-- Optional button linking to Contact or CV -->
+      <p>
+        <a href="/contact.html" style="
+          display: inline-block;
+          padding: 0.7rem 1rem;
+          background: #333;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 4px;
+        ">
+          Contact Me
+        </a>
+      </p>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
 </body>
 </html>
