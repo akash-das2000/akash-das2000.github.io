@@ -9,7 +9,7 @@
 
   <!-- Inline CSS for a complete one-file solution -->
   <style>
-    /* 1. GLOBAL RESETS & BASE STYLES */
+    /* GLOBAL RESETS & BASE STYLES */
     * {
       margin: 0;
       padding: 0;
@@ -22,7 +22,7 @@
       color: #333;
     }
 
-    /* 2. TRANSPARENT NAVBAR */
+    /* TRANSPARENT NAVBAR */
     header {
       position: absolute;  /* sits on top of the hero image */
       top: 0;
@@ -62,11 +62,11 @@
       color: #ddd;
     }
 
-    /* 3. FULL-SCREEN HERO SECTION */
+    /* FULL-SCREEN HERO SECTION */
     .hero {
       height: 100vh; /* fill the viewport height */
       width: 100%;
-      background: url("/assets/images/hero.jpg") no-repeat center center/cover;
+      background: url("/assets/images/hero.jpg") no-repeat center center/cover; /* Replace with your actual hero image path */
       position: relative;
       display: flex;
       align-items: center;
@@ -98,7 +98,36 @@
       font-size: 1.3rem;
     }
 
-    /* 4. FOOTER (OPTIONAL) */
+    /* ABOUT SECTION (Headshot + Details) */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+      background: #fff; /* or pick any background color you like */
+    }
+    .about-section img {
+      max-width: 300px;
+      border-radius: 8px;
+      margin: 1rem;
+    }
+    .about-text {
+      max-width: 600px;
+      margin: 1rem;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    /* FOOTER (OPTIONAL) */
     footer {
       background: #000;
       color: #fff;
@@ -136,7 +165,24 @@
     </div>
   </section>
 
-  <!-- FOOTER (OPTIONAL) -->
+  <!-- ABOUT SECTION: Headshot & Brief Details -->
+  <section class="about-section">
+    <!-- Replace with your actual headshot path -->
+    <img src="/assets/images/headshot.jpg" alt="Your Headshot" />
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        This is a brief introduction where you can highlight your background, 
+        research interests, or key achievements.
+      </p>
+      <p>
+        Feel free to add more detail about your work, goals, or anything else 
+        you'd like visitors to know.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
