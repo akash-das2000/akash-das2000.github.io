@@ -7,18 +7,10 @@
   <link rel="stylesheet" href="/css/style.css" />
   <style>
     /* Basic resets */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.5; scroll-behavior: smooth; }
 
-    /* Sticky Header (Same as landing.html) */
+    /* Shared Navbar styling */
     header {
       position: fixed;
       top: 0;
@@ -27,38 +19,18 @@
       background-color: #000;
       color: #fff;
       z-index: 999;
+      padding: 1rem 0;
     }
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-    .nav-logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 2rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ccc;
-    }
-
-    /* Content wrapper to avoid overlap with fixed header */
+    
+    /* Content wrapper so content isn’t hidden behind the fixed header */
     .content-wrapper {
-      margin-top: 80px; /* Adjust to match your header height */
+      margin-top: 80px; /* Adjust based on header height */
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
       padding: 1rem;
     }
-
+    
     footer {
       background: #000;
       color: #fff;
@@ -69,20 +41,9 @@
   </style>
 </head>
 <body>
+  <!-- Use the shared navbar -->
   <header>
-    <div class="nav-container">
-      <!-- Same logo/brand as landing.html -->
-      <div class="nav-logo">Akash Das</div>
-      <nav>
-        <!-- Same links as landing.html -->
-        <a href="/bio.html">Bio</a>
-        <a href="/academics.html">Academics</a>
-        <a href="/work_exp.html">Work Exp</a>
-        <a href="/personal_projects.html">Personal Projects</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
+    {% include nav.html %}
   </header>
 
   <div class="content-wrapper">
